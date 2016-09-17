@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <title>Nan Wu Viz Sample</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+      <link href="css/plugins/jsTree/style.min.css" rel="stylesheet">
+      <link href="css/animate.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+      <!-- Favicons -->
+      <link rel="shortcut icon" href="img/favicon.png">
+      <style>
+         .li-clicked {
+         background: #c4ebe3;
+         }
+      </style>
+   </head>
+   <body>
+      <div id="wrapper">
+         <nav class="navbar-default navbar-static-side fixed-side" role="navigation">
+            <div class="sidebar-collapse">
+               <ul class="nav metismenu" id="side-menu">
+                  <li class="nav-header logo-nav">
+                     <div class="profile-element text-center">
+                        <span>
+                        <a href="index.html"><img alt="image" class="logo-style" src="img/logo.png" /></a>
+                        </span>
+                     </div>
+                     <div class="logo-element">
+                        NW
+                     </div>
+                  </li>
+                  <li>
+                     <a href="><i class="fa fa-search"></i> <span class="nav-label">Search</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-pencil-square-o"></i> <span class="nav-label">Index</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-share-square-o"></i> <span class="nav-label">Share</span></a>
+                  </li>
+                 <li>
+                     <a href=""><i class="fa fa-history"></i> <span class="nav-label">History</span></a>
+                  </li>
+                  <li class="active">
+                     <a href="visualization.html"><i class="fa fa-bar-chart"></i> <span class="nav-label">Visualization</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-tags"></i> <span class="nav-label">Tags</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-file-text-o"></i> <span class="nav-label">Documents</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-bell"></i> <span class="nav-label">Messages</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-user"></i> <span class="nav-label">User Account</span></a>
+                  </li>
+                  <li>
+                     <a href=""><i class="fa fa-sign-out"></i> <span class="nav-label">Log out</span></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+         <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+               <nav class="navbar navbar-fixed-top top-m-left" role="navigation" style="margin-bottom: 0">
+                  <div class="navbar-header">
+                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                  </div>
+                  <div class="user-info-top">
+                     <ul class="nav navbar-top-links">
+                        <li>
+                           <span class="m-t-md text-muted welcome-message">Welcome to My Sample Viz Page.</span>
+                        </li>
+                        <li>
+                           <a href="account.html">
+                           <i class="fa fa-user"></i> <span class="text-navy ">Nan Wu</span>
+                           </a>
+                        </li>
+                                        <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="mailbox.html">
+                                <div>
+                                    You have 2 messages...
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="profile.html">
+                                <div>
+                                    New Followers...
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="grid_options.html">
+                                <div>
+                                    Server Rebooted...
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="messages.html">
+                                    <strong>See All Messages</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                     </ul>
+                  </div>
+                  <ul class="nav navbar-top-links pull-right xs-right-mag">
+                     <li>
+                        <button id="fontResize" class="btn btn-primary btn-outline btn-sm m-t m-l-xs" type="button"><i class="fa fa-font"></i> <span class="xs-hide">Font size</span></button>              
+                     </li>
+                     <li>
+                        <div>
+                           <a href="#topNav" class="btn btn-primary btn-outline btn-xs m-t top-a m-l-xs" type="button"><i class="fa fa-arrow-up"></i> <span class="xs-hide">Go to top</span></a>  
+                        </div>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div id="topNav" class="row wrapper border-bottom white-bg page-heading xs-no-l-mag">
+               <div class="col-lg-9">
+                  <ol class="breadcrumb">
+                     <li>
+                        <a href="search.html">Home</a>
+                     </li>
+                     <li class="active">
+                        <strong>    Visualization</strong>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+               <div class="row">
+                  <div class="col-lg-12 xs-no-pad">
+                     <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                           <div class="max-right-side">
+                              <h1>
+                                 My Data Visualization Samples at ParaTool
+                              </h1>
+                           </div>
+                           <!-- max-right-side end-->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+
+                <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Line Chart 
+                                <small>With custom colors.</small>
+                            </h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="lineChart" height="140"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Bar Chart</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="barChart" height="140"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Polar Area</h5>
+
+                        </div>
+                        <div class="ibox-content">
+                            <div class="text-center">
+                                <canvas id="polarChart" height="140"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Pie Chart</h5>
+
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="doughnutChart" height="140"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Radar Chart </h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!--
+ You need to include this script on any page that has a Google Map.
+ When using Google Maps on your own site you MUST signup for your own API key at:
+ https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+ After your sign up replace the key in the URL below..
+-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Google Maps Basic</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p>
+                                With google maps <a href="https://developers.google.com/maps/documentation/javascript/reference#MapOptions">API</a> You can easy customize your map.
+                            </p>
+                            <div class="google-map" id="map1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Custom theme 1</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p>
+                                This is a custom theme for Google map.
+                            </p>
+                            <div class="google-map" id="map2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Street View</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <p>
+                                You can also initial turn on Street View in Google maps.
+                            </p>
+                            <div class="google-map" id="pano" style="height: 500px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            </div>
+            <div class="footer">
+               <div class="pull-right">
+                  Welcome to <strong>Nan Wu's sample page.</strong>.
+               </div>
+               <div>
+                  <strong>Copyright:</strong>Nan Wu
+			  </div>
+            </div>
+         </div>
+      </div>
+      <!-- Mainly scripts -->
+      <script src="js/jquery-2.1.1.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+      <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+      <!-- Custom and plugin javascript -->
+      <script src="js/inspinia.js"></script>
+      <script src="js/plugins/pace/pace.min.js"></script>
+      <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+    <script src="js/demo/chartjs-demo.js"></script>
+      <!-- Main javascript -->
+      <script src="js/main.js"></script>
+      <script type="text/javascript">
+        // When the window has finished loading google map
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Options for Google map
+            // More info see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions1 = {
+                zoom: 11,
+                center: new google.maps.LatLng(37.7844247,-122.407557),
+                // Style for Google Maps
+                styles: [{"featureType":"water","stylers":[{"saturation":43},{"lightness":-11},{"hue":"#0088ff"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"hue":"#ff0000"},{"saturation":-100},{"lightness":99}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#808080"},{"lightness":54}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ece2d9"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#ccdca1"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#767676"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#b8cb93"}]},{"featureType":"poi.park","stylers":[{"visibility":"on"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"on"}]},{"featureType":"poi.medical","stylers":[{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"simplified"}]}]
+            };
+
+            var mapOptions2 = {
+                zoom: 11,
+                center: new google.maps.LatLng(37.7844247,-122.407557),
+                // Style for Google Maps
+                styles: [{"featureType":"all","elementType":"all","stylers":[{"invert_lightness":true},{"saturation":10},{"lightness":30},{"gamma":0.5},{"hue":"#435158"}]}]
+            };
+
+            var mapOptions3 = {
+                center: new google.maps.LatLng(37.7844247,-122.407557),
+                zoom: 18,
+                mapTypeId: google.maps.MapTypeId.SATELLITE,
+                // Style for Google Maps
+                styles: [{"featureType":"road","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#fffffa"}]},{"featureType":"water","stylers":[{"lightness":50}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"lightness":40}]}]
+            };
+
+            var mapOptions4 = {
+                zoom: 11,
+                center: new google.maps.LatLng(37.7844247,-122.407557),
+                // Style for Google Maps
+                styles: [{"stylers":[{"hue":"#18a689"},{"visibility":"on"},{"invert_lightness":true},{"saturation":40},{"lightness":10}]}]
+            };
+
+            var fenway = new google.maps.LatLng(37.7844247,-122.407557);
+            var mapOptions5 = {
+                zoom: 14,
+                center: fenway,
+                // Style for Google Maps
+                styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
+            };
+
+            var panoramaOptions = {
+                position: fenway,
+                pov: {
+                    heading: 10,
+                    pitch: 10
+                }
+            };
+            var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+
+            // Get all html elements for map
+            var mapElement1 = document.getElementById('map1');
+            var mapElement2 = document.getElementById('map2');
+            var mapElement3 = document.getElementById('map3');
+            var mapElement4 = document.getElementById('map4');
+
+            // Create the Google Map using elements
+            var map1 = new google.maps.Map(mapElement1, mapOptions1);
+            var map2 = new google.maps.Map(mapElement2, mapOptions2);
+            var map3 = new google.maps.Map(mapElement3, mapOptions3);
+            var map4 = new google.maps.Map(mapElement4, mapOptions4);
+        }
+    </script>
+   </body>
+</html>

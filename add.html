@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <title>PalaSearch</title>
+      <link href="../css/bootstrap.min.css" rel="stylesheet">
+      <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+      <link href="../css/animate.css" rel="stylesheet">
+      <link href="../css/plugins/dropzone/basic.css" rel="stylesheet">
+      <link href="../css/plugins/dropzone/dropzone.css" rel="stylesheet">
+      <!-- Sweet Alert -->
+      <link href="../css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+      <link href="../css/style.css" rel="stylesheet">
+   </head>
+   <body>
+      <!-- file upload mask start-->   
+      <!-- for show alert add jQuery: .removeClass("hidden")> -->
+      <div id="fileAlert" class="hidden">
+         <div class="file-upload-mask file-upload-opacity">
+         </div>
+         <div  class="file-alert-pan">
+            <img alt="loading" class="m-t-lg"  src="../img/loading.gif" />
+            <h3 class="m-t-lg">上传文件</h3>
+            <div class="file-upload-list">
+               new.pdf <i class="fa fa-check"></i><br>
+               elecments.txt <i class="fa fa-check"></i><br>
+               new.pdf  <i class="fa fa-check"></i> <br>
+               new.pdf <i class="fa fa-check"></i><br>
+               elecments.txt <i class="fa fa-check"></i><br>
+               new.pdf  <i class="fa fa-check"></i> <br>
+            </div>
+            <div>
+               <button type="button" id="file-cancle" class="btn btn-primary m-t"></button>
+            </div>
+         </div>
+      </div>
+      <!-- file upload mask end-->  
+      <div id="wrapper">
+         <nav class="navbar-default navbar-static-side fixed-side" role="navigation">
+            <div class="sidebar-collapse">
+               <ul class="nav metismenu" id="side-menu">
+                  <li class="nav-header logo-nav">
+                     <div class="profile-element text-center">
+                        <span>
+                        <a href="index.html"><img alt="image" class="logo-style" src="../img/logo.png" /></a>
+                        </span>
+                     </div>
+                     <div class="logo-element">
+                        PLS
+                     </div>
+                  </li>
+                  <li>
+                     <a href="search.html"><i class="fa fa-search"></i> <span class="nav-label">搜索</span></a>
+                  </li>
+                  <li class="active">
+                     <a href="add.html"><i class="fa fa-pencil-square-o"></i> <span class="nav-label">归档</span></a>
+                  </li>
+                  <li>
+                     <a href="tag_share.html"><i class="fa fa-share-square-o"></i> <span class="nav-label">分享</span></a>
+                  </li>
+                  <li>
+                     <a href="visualization.html"><i class="fa fa-bar-chart"></i> <span class="nav-label">可视化</span></a>
+                  </li>
+                  <li>
+                     <a href="tag_management.html"><i class="fa fa-tags"></i> <span class="nav-label">标签</span></a>
+                  </li>
+                  <li>
+                     <a href="documents.html"><i class="fa fa-file-text-o"></i> <span class="nav-label">文档</span></a>
+                  </li>
+                  <li>
+                     <a href="messages.html"><i class="fa fa-bell"></i> <span class="nav-label">消息</span></a>
+                  </li>
+                  <li>
+                     <a href="account.html"><i class="fa fa-user"></i> <span class="nav-label">用户账号</span></a>
+                  </li>
+                  <li>
+                     <a href="login.html"><i class="fa fa-sign-out"></i> <span class="nav-label">登出</span></a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+         <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+               <nav class="navbar navbar-fixed-top top-m-left" role="navigation" style="margin-bottom: 0">
+                  <div class="navbar-header">
+                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                  </div>
+                  <div class="user-info-top">
+                     <ul class="nav navbar-top-links">
+                        <li>
+                           <span class="m-t-md text-muted welcome-message">欢迎使用 PalaSearch.</span>
+                        </li>
+                        <li>
+                           <a href="account.html">
+                           <i class="fa fa-user"></i> <span class="text-navy " id="usr-name"></span>
+                           </a>
+                        </li>
+                        <!-- <li class="dropdown">
+                           <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                           <i class="fa fa-bell"></i>  <span class="label label-warning">8</span>
+                           </a>
+                           <ul class="dropdown-menu dropdown-alerts">
+                              <li>
+                                 <a href="mailbox.html">
+                                    <div>
+                                       Etan sent a message...
+                                       <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                 <a href="profile.html">
+                                    <div>
+                                       Amy sharing HTML...
+                                       <span class="pull-right text-muted small">12 minutes ago</span>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                 <a href="grid_options.html">
+                                    <div>
+                                       Tim sharing...
+                                       <span class="pull-right text-muted small">4 minutes ago</span>
+                                    </div>
+                                 </a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                 <div class="text-center link-block">
+                                    <a href="messages.html">
+                                    <strong>See All Messages</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                    </a>
+                                 </div>
+                              </li>
+                           </ul>
+                        </li> -->
+                     </ul>
+                  </div>
+                  <ul class="nav navbar-top-links pull-right xs-right-mag">
+                     <li>
+                        <button id="fontResize" class="btn btn-primary btn-outline btn-sm m-t m-l-xs" type="button"><i class="fa fa-font"></i> <span class="xs-hide">文字大小</span></button>              
+                     </li>
+                     <li>
+                        <div>
+                           <a href="#topNav" class="btn btn-primary btn-outline btn-xs m-t top-a m-l-xs" type="button"><i class="fa fa-arrow-up"></i> <span class="xs-hide">跳至顶端</span></a>  
+                        </div>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div id="topNav" class="row wrapper border-bottom white-bg page-heading xs-no-l-mag">
+               <div class="col-lg-9">
+                  <ol class="breadcrumb">
+                     <li>
+                        <a href="search.html">主页</a>
+                     </li>
+                     <li class="active">
+                        <strong>    归档</strong>
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+               <div class="row">
+                  <div class="col-lg-12 xs-no-pad">
+                     <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                           <div class="max-right-side">
+                              <h2>
+                                 归档</span>
+                              </h2>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                           <form method="get" id="index-form" class="form-horizontal m-t-lg">
+                              <div class="form-group">
+                                 <label class="col-sm-2 control-label">标签</label>
+                                 <div class="col-sm-10">
+                                    <!-- Category talbe start -->
+                                    <div id = "categoryTab"  class="clearfix">
+                                       
+                                    </div>
+                                    <!-- Category talbe end -->
+                                    <button type="button" class="btn btn-default btn-xs m-t" data-toggle="modal" data-target="#myModal">添加标签</button>
+                                    <button type="button" class="btn btn-default btn-xs m-t m-l-sm del-tag-btn hidden">删除标签</button>
+                                 </div>
+                              </div>
+                              <!-- <div class="form-group">
+                                 <label class="col-sm-2 control-label">Tag Group</label>
+                                 <div class="col-sm-10">
+                                   
+                                    <div id = "categoryTab"  class="clearfix">
+                                       <label class="ck-button">
+                                       <input type="checkbox" value="1"><span>1</span>
+                                       </label>
+                                       <label class="ck-button">
+                                       <input type="checkbox" value="1"><span>2</span>
+                                       </label>
+                                       <label class="ck-button">
+                                       <input type="checkbox" value="1"><span>3</span>
+                                       </label>
+                                    </div>
+                                   
+                                    <a href="tag_management.html" type="button" class="btn btn-default btn-xs m-t">Tag Management</a>
+                                 </div>
+                                 </div> -->
+                              <div class="hr-line-dashed"></div>
+                              <div class="form-group">
+                                 <label class="col-sm-2 control-label">文档备注</label>
+                                 <div class="col-sm-10">
+                                    <textarea rows="4" cols="50" id="index-comments" class="form-control"></textarea>
+                                 </div>
+                              </div>
+                              <div class="hr-line-dashed"></div>
+                              <div class="form-group">
+                                 <label class="col-sm-2 control-label">目标信息</label>
+                                 <div class="col-sm-10">
+                                    <div id="tag-tree" class="tabs-container">
+                                       <ul class="nav nav-tabs">
+                                          <li class="active"><a data-toggle="tab" href="#tab-1">文件</a></li>
+                                          <li class=""><a data-toggle="tab" href="#tab-2">链接</a></li>
+                                       </ul>
+                                       <div class="tab-content">
+                                          <div id="tab-1" class="tab-pane active">
+                                             <div class="panel-body">
+                                                <div class="ibox float-e-margins ">
+                                                   <div class="ibox-content add-drop-style">
+                                                      <div id="my-awesome-dropzone" class="dropzone" action="#">
+                                                         <div class="dropzone-previews"></div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div id="tab-2" class="tab-pane">
+                                             <div class="panel-body">
+                                                <textarea rows="12" cols="50" class="form-control" placeholder="在此处添加链接"></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="hr-line-dashed"></div>
+                              <div class="form-group">
+                                 <div class="col-sm-4 col-sm-offset-2">
+                                    <button class="btn btn-primary" type="submit">提交</button>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">添加标签</h4>
+                     </div>
+                     <div class="modal-body">
+                        <div class="form-group">
+                           <input name="tagName" type="text" placeholder="新标签名" class="form-control">
+                        </div>
+                     </div>
+                     <div class="modal-footer clearfix">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn add-tag btn-primary">添加标签</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Modal end-->
+            <div class="footer">
+               <div class="pull-right">
+                  欢迎使用<strong>PalaSearch</strong>.
+               </div>
+               <div>
+                  <strong>版权所有：</strong> PalaSearch Company &copy; 2016
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Mainly scripts -->
+      <script src="../js/jquery-2.1.1.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/plugins/metisMenu/jquery.metisMenu.js"></script>
+      <script src="../js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+      <!-- Custom and plugin javascript -->
+      <script src="../js/inspinia.js"></script>
+      <script src="../js/plugins/pace/pace.min.js"></script>
+      <!-- DROPZONE -->
+      <script src="../js/plugins/dropzone/dropzone.js"></script>
+      <script src="../js/dropzone-addFile.js"></script>
+      <!-- Sweet alert -->
+      <script src="../js/plugins/sweetalert/sweetalert.min.js"></script>
+      <!-- Main javascript -->
+      <script src="../js/main.js"></script>
+	  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js"></script>
+	  <script src="../js/pih.js"></script>
+	  <script>
+		 function populateTagTab(tags){
+			var container = $('#categoryTab');
+			$('.del-tag-btn').addClass("hidden");
+			if(tags!=null)for(var i = 0;i < tags.length; i++){
+				var l = $("<label>",{class:"ck-button"}).appendTo(container);
+				$("<input>",{type:"checkbox",value:"1"}).attr("id",tags[i].id).appendTo(l);
+				$("<span>",{html:tags[i].name}).appendTo(l);
+				$('.del-tag-btn').removeClass("hidden");
+			}
+		 }
+		 function getSelectedTags(){
+			var tags = [];
+			var selected = $('#categoryTab input:checked');
+			for(var i = 0;i < selected.length;i++ ){
+				tags.push($(selected[i]).attr("id"));
+			}
+			return tags;
+		 }
+		 function getR(tags){
+			var r = "";
+			for(var i= 0;i < tags.length;i++){
+			 r += (i!=0?",":"")+"Field"+tags[i];
+			}
+			return r;
+		 }
+		 function getSimple(url){
+			var parser = document.createElement('a');
+			parser.href = url;
+			return parser.protocol+"//"+parser.hostname;
+		 }
+		 function isValidURL(url) {
+			return /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})).?)(?::\d{2,5})?(?:[/?#]\S*)?$/i.test( url );
+		 };
+         require(['js/pih/client/index','js/3rd/jquery.i18n.properties.js'], function(data){
+			$.pih.loadLang();
+			$.pih.api = require('js/pih/client/index');
+			$.pih.api.user = new $.pih.api.UserApi();
+			$.pih.api.auth = new $.pih.api.AuthApi();
+			$.pih.api.data = new $.pih.api.DataApi();
+			var callback = function(error, data, res) {
+			  if (error) {
+				$.pih.handleError(res, function(msg, field){
+				  alert($.pih.i18n.prop(msg,field));
+				});
+				
+			  } else {console.log(data);
+				$('#usr-name').html(data.name);
+				populateTagTab(data.tags);
+			  }
+			};
+			$.pih.api.user.getInfo($.pih.getToken(), callback);
+			
+			var files;
+			var current;
+			var cancel;
+			var isFile;
+			function upload(){
+				if(current >= files.length || current < 0 || cancel) return;
+				var comments = $("#index-comments").val();
+				var r = getR(getSelectedTags()).trim();
+				
+				var indexCallback = function(error, data, res) {
+					var e = $("#fileAlert").find("i[id='file_"+current+"']");
+				    if (error) {
+						e.addClass('fa-times');
+				    } else {
+						e.addClass('fa-check');
+				   }
+				   current++;
+				   if(current == files.length){
+				    $("#fileAlert").find(".file-alert-pan img").attr("src","../img/done.png");
+				    $("#file-cancle").html($.pih.i18n.prop("ok"));
+				   }else upload();
+				};
+				if(isFile) $.pih.api.data.index(files[current], $.pih.getToken(), {'r':r,'comments':comments}, indexCallback);
+				else $.pih.api.data.indexURL($.pih.getToken(), {'r':r,'comments':comments,'url':files[current]}, indexCallback);
+			}
+			$('#file-cancle').click(function () {
+				$("#fileAlert").addClass("hidden");
+				cancel = true;
+			});
+			//index
+			var form = $('form#index-form');
+			form.on('submit', function(e) {
+				$('.alert').remove();
+				e.preventDefault();
+				current = 0;
+				cancel = false;
+				files = [];
+				if($('#tab-1.active').length > 0){
+					files = $('.dropzone').get(0).dropzone.getAcceptedFiles();
+					isFile=true;
+				}else if($('#tab-2.active').length > 0){
+					var urls = $('#tab-2.active').find('textarea').val().trim();
+					if(urls.length == 0)files = [];
+					else files = $('#tab-2.active').find('textarea').val().trim().split(/[\s,;]+/);
+					isFile=false;
+					for(var ui = files.length -1; ui >= 0 ; ui--){
+						if(!isValidURL(files[ui])){
+							files.splice(ui, 1);
+						}
+					}
+				}
+
+				if(files.length == 0)return;
+				$("#fileAlert").find("h3.m-t-lg").html($.pih.i18n.prop(isFile?"doc.index.upload":"doc.index.upload.url"));
+				$("#file-cancle").html($.pih.i18n.prop("cancel"));
+				$("#fileAlert").find(".file-alert-pan img").attr("src","../img/loading.gif");
+				var container = $("#fileAlert").find('.file-upload-list').empty();
+				for(var i = 0; i < files.length; i++){
+					var r = $("<div>").appendTo(container);
+					if(isFile)$("<span>").html(files[i].name).appendTo(r);
+					else $("<span>").html(getSimple(files[i])).appendTo(r);
+					$("<i>",{id:"file_"+i,class:"fa"}).appendTo(r);
+				}
+         
+				$("#fileAlert").removeClass("hidden");
+				upload();
+			});
+			
+			//add tag
+			$('.add-tag').click(function () {
+				$('.alert').remove();
+				var name = $("input[name='tagName']").val().trim();
+				if(name.length == 0)return;
+				var addCallback = function(error, data, res) {
+				  if (error) {
+					
+					$.pih.handleError(res, function(msg, field){
+					  $.pih.createAlert($.pih.i18n.prop(msg,field)).insertBefore($("input[name='tagName']").parent());
+					});
+				  } else {
+				    var id = data;
+					populateTagTab([{id:id, name:name}]);
+					$.pih.createSuccess($.pih.i18n.prop("user.tag.new.success")).insertBefore($("input[name='tagName']").parent());
+				    $("input[name='tagName']").val('');
+				  }
+				};
+				$.pih.api.user.create(name, "Tag", $.pih.getToken(), addCallback);
+			});
+			
+			//delete tag(s)
+			$('.del-tag-btn').click(function () {
+				var tags = getSelectedTags();
+				$('.alert').remove();
+				if(tags.length == 0)return;
+				swal({
+					title: $.pih.i18n.prop("are.you.sure"),
+					text: $.pih.i18n.prop("user.tag.delete.warnning"),
+					type: "warning",
+					showCancelButton: true,
+					confirmButtonColor: "#DD6B55",
+					confirmButtonText: $.pih.i18n.prop("user.tag.delete.yes.btn"),
+					closeOnConfirm: false
+				}, function () {
+					var delCallback = function(error, data, res) {
+					  if (error) {
+						$.pih.handleError(res, function(msg, field){
+						  alert($.pih.i18n.prop(msg,field));
+						});
+					  } else {
+						swal($.pih.i18n.prop("deleted"), $.pih.i18n.prop("user.tag.delete.success"), "success");
+						for(var i = 0;i < tags.length; i++){
+							var id = tags[i];
+							$("input[id='"+id+"']").parent().remove();
+						}
+					  }
+					};
+					var r = getR(tags);
+					$.pih.api.user.callDelete($.pih.getToken(), r, delCallback);
+					
+				});
+			});
+			
+		});
+      </script>
+   </body>
+</html>

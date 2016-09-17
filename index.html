@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Hanson Wu's Personal Page</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="img/favicon.png">
+	<title>Nan Wu's Personal Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -10,7 +26,13 @@
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <style>
+	<style>
+	
+	a:link {color: #0abab5; text-decoration: none; }
+	a:active {color: #0abab5; text-decoration: none; }
+	a:visited {color: #0abab5; text-decoration: none; }
+	a:hover {color: #0abab5; text-decoration: underline; }
+	
   body {
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
@@ -40,7 +62,7 @@
       padding: 60px 50px;
   }
   .bg-grey {
-      background-color: #f6f6f6;
+      background-color: #f8f8f8;
   }
   .logo-small {
       color: #0abab5;
@@ -190,37 +212,54 @@
   }
   </style>
 </head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#myPage">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#cv">CURRICULA VITAE</a></li>
-        <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#pricing">INTERESTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<body data-spy="scroll" data-target=".navbar"  class="landing-page">
+<div class="navbar-wrapper" id = "top">
+        <nav class="navbar navbar-default navbar-fixed-top" a href="#myPage">
+			<div class="container" >
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" >
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>                        
+					</button>
+					<a class="navbar-brand" a href="#about">NW</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">ABOUT</a></li>
+						<li><a href="#portfolio">PORTFOLIO</a></li>
+						<li><a href="#bio">BIO</a></li>
+						<li><a href="#interests">INTERESTS</a></li>
+						<li><a href="#contact">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+	</nav>
+</div>
 
-<div class="jumbotron text-center">
-  <h1>Nan Wu</h1> 
-  <p>Playing with data.</p> 
-  <form class="form-inline">
-    <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-    <button type="button" class="btn btn-danger">Subscribe</button>
-  </form>
+
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <!-- <ol class="carousel-indicators">
+        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#inSlider" data-slide-to="1"></li>
+    </ol> -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div id="particles-js">
+				 <div class="container">
+					<div class="carousel-caption">
+						<h1>Nan Wu</h1>
+						<p>To be a Data Scientist</p>
+				    </div>	
+                 </div>   
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+    </div>
+
 </div>
 
 <!-- Container (About Section) -->
@@ -228,12 +267,19 @@
   <div class="row">
     <div class="col-sm-8">
       <h2>About Me</h2><br>
-      <h4>Dedicated graduate student with Computer Science and Statistics background seeking a position in data science area includes data analysis, data mining, business intelligence, software development and so on.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
+      <h4>I have both Computer Science and Statistics background, years of experiences on data analysis and data enigineering, love to make sense of data. </h4>
+	  <p><strong>DATA ANALYSIS</strong><p> 
+	  <li>Statistics Modeling, Machine Learning, Time series, Hypothesis Test, A/B Test, Regression, ANOVA, ANCOVA, Stochastic process, Mathematical Statistics
+		</li>
+		<p><strong>PROGRAMMING</strong><p> 
+	  <li>Python, R, SAS, SQL, Java, AWS, C#, HTML, Javascript, Spark, Hive, Excel (Pivot table), Tableau, Minitab, SQL Server 2013, Oracle 12c, MySQL, MongoDB, ETL, OLAP, MS BI Stack (SSAS, SSIS, SSRS)
+      </li>
+</p>
+
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+      <!--<span class="glyphicon glyphicon-signal logo"></span>-->
+	  <img src="img/careergoal.jpg">
     </div>
   </div>
 </div>
@@ -241,22 +287,23 @@
 <div class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      <img src="img/aboutme.jpg" >
     </div>
     <div class="col-sm-8">
       <h2>Career Goal</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h4>A position in data science area includes data analysis, data engineering, data mining, business intelligence and software development.</h4><br>
+      <p><strong>To be a data scientist!</strong> </p>
     </div>
   </div>
 </div>
 
-<!-- Container (Services Section) -->
+<!-- Container (portfolio Section) -->
 <div id="portfolio" class="container-fluid text-center">
   <h2>Portfolio</h2>
-  <h4>What I have learned, done and intersted</h4>
+  <h4>What I have learned, researched, and finished.</h4>
   <br>
+  
+  <!--
   <div class="row slideanim">
     <div class="col-sm-3">
       <span class="glyphicon glyphicon-off logo-small"></span>
@@ -297,37 +344,157 @@
       <p>Lorem ipsum dolor sit amet..</p>
     </div>
   </div>
+  -->
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Data Visualization</h1>
+        </div>
+        <div class="panel-body">
+		  <p><a target="_blank" href="https://public.tableausoftware.com/views/SF_parkingmeters/SF_downtown?:showVizHome=no#1">SF Parking Meters</a></p>
+          <p><a target="_blank" href="https://public.tableau.com/views/project02_0/Dashboard1?:showVizHome=no#1">California Unemployment</a></p>
+          <p><a target="_blank" href="https://hansonwu.shinyapps.io/GlobalPulation/">Global Population</a></p>
+		  <p><a target="_blank" href="https://www.udemy.com/data-visualization-in-extool/">Viz Projects at ParaTool</a></p>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-lg" onclick="location.href='visualization.html'">More</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Statistical Analysis</h1>
+        </div>
+        <div class="panel-body">
+		  <p><a target="_blank" href="https://drive.google.com/file/d/0B6a_tMa2NYh0dGdJY25hTy1pUHM/view?usp=sharing">Time Series Analysis</a></p>
+          <p><a target="_blank" href="https://drive.google.com/file/d/0B6a_tMa2NYh0bkF5STkwY29EdDg/view?usp=sharing">Airline data Analysis</a></p>
+          <p><a target="_blank" href="https://drive.google.com/file/d/0B6a_tMa2NYh0RzdteDRXenBpWVU/view">Multiple models comparison</a></p>
+		  <p><a target="_blank" href="https://www.udemy.com/statistical-analysis-with-excel-by-using-extool/">Stats Projects at ParaTool</a></p>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-lg" disabled>More</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Application</h1>
+        </div>
+        <div class="panel-body">
+          <p><a target="_blank" href="https://play.google.com/store/apps/details?id=com.sw.smallworld&hl=en">SmallWorld News (Android)</a></p>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-lg" disabled>More</button>
+        </div>
+      </div>      
+    </div> 
+	<!--
+	<div class="col-sm-3 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Misc</h1>
+        </div>
+        <div class="panel-body">
+          <p><a target="_blank" href="https://www.youtube.com/channel/UCdsM1hHib1Xs5pw_RFQ0egQ/playlists?shelf_id=0&view=1&sort=dd">ExTool Youtube Videos</a></p>
+          <p><a target="_blank" href="https://www.udemy.com/courses/search/?ref=home&src=ukw&q=ExTool">ExTool Udemy Courses</a></p>
+        </div>
+        <div class="panel-footer">
+          <h3>$49</h3>
+          <h4>per month</h4>
+          <button class="btn btn-lg">More</button>
+        </div>
+      </div>      
+    </div>   
+	-->
+  </div>
 </div>
-
 <!-- Container (Portfolio Section) -->
-<div id="portfolio" class="container-fluid text-center bg-grey">
-  <h2>Portfolio</h2><br>
-  <h4>What we have created</h4>
-  <div class="row text-center slideanim">
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="paris.jpg" alt="Paris" width="400" height="300">
-        <p><strong>Paris</strong></p>
-        <p>Yes, we built Paris</p>
-      </div>
+<div id="bio" class="container-fluid text-center bg-grey">
+  <h2>My Bio</h2><br>
+  <h4>I was born in Ma'anshan, an industrial city located in Eastern China stretching across the Yangtze River famous in iron-manufactoring.</h4>
+  <h4>Now I am living in San Francisco Bay Area to chase my "California Dream".</h4>
+  <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>FROM</h1>
+                <p>1989</p>
+            </div>
+        </div>
+        <div class="row features-block">
+
+            <div class="col-lg-12">
+                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-users"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>Ma'anshan No.2 High School</h2>
+                            <p>Ma'anshan, Anhui, China.</p>
+                            <!-- <a href="#" class="btn btn-xs btn-primary"> More info</a> -->
+                            <span class="vertical-date"><font size="4">2004-2007</font></span>
+                        </div>
+                    </div>
+
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-university"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>Chaohu University</h2>
+                            <p>Chaohu, Anhui, China</p>
+							<p>B.S. Computer Science</p><br>
+                            <!-- <a href="#" class="btn btn-xs btn-primary"> More info</a> -->
+                            <span class="vertical-date"><font size="4">2007-2011</font></span>
+                        </div>
+                    </div>
+
+                    <div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-university"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>Anhui University of Technology</h2>
+                            <p>Ma'anshan, Anhui, China</p>
+							<p>M.S. Computer Science, Option: Data Mining</p>
+                            <!-- <a href="#" class="btn btn-xs btn-primary">More info</a> -->
+                            <span class="vertical-date"><font size="4">2011-2014</font></span>
+                        </div>
+                    </div>
+					
+					<div class="vertical-timeline-block">
+                        <div class="vertical-timeline-icon navy-bg">
+                            <i class="fa fa-university"></i>
+                        </div>
+
+                        <div class="vertical-timeline-content">
+                            <h2>California State University, East Bay</h2>
+							<p>Hayward, CA, US</p>
+                            <p>M.S. Statistics, Option: Computational Statistics</p>
+                            <!-- <a href="#" class="btn btn-xs btn-primary">More info</a> -->
+                            <span class="vertical-date"><font size="4">2014-2016</font></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="newyork.jpg" alt="New York" width="400" height="300">
-        <p><strong>New York</strong></p>
-        <p>We built New York</p>
-      </div>
-    </div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="sanfran.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>San Francisco</strong></p>
-        <p>Yes, San Fran is ours</p>
-      </div>
-    </div>
-  </div><br>
+
+</section>
+
+
+
   
-  <h2>What our customers say</h2>
+  <h2>My Gallery</h2>
   <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -339,13 +506,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+        <h4>"Comming soon"<br><span style="font-style:normal;">Nan Wu</span></h4>
       </div>
       <div class="item">
-        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+        <h4>"Comming soon"<br><span style="font-style:normal;">Nan Wu</span></h4>
       </div>
       <div class="item">
-        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+        <h4>"Comming soon"<br><span style="font-style:normal;">Nan Wu</span></h4>
       </div>
     </div>
 
@@ -361,136 +528,150 @@
   </div>
 </div>
 
-<!-- Container (Pricing Section) -->
-<div id="pricing" class="container-fluid">
-  <div class="text-center">
-    <h2>Pricing</h2>
-    <h4>Choose a payment plan that works for you</h4>
-  </div>
+<!-- Container (interests Section) -->
+<div id="interests" class="container-fluid text-center">
+  <h2>INTERESTS</h2>
+  <h4>I am a fan of:</h4>
+  <br>
   <div class="row slideanim">
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Basic</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>20</strong> Lorem</p>
-          <p><strong>15</strong> Ipsum</p>
-          <p><strong>5</strong> Dolor</p>
-          <p><strong>2</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$19</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>     
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Pro</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>50</strong> Lorem</p>
-          <p><strong>25</strong> Ipsum</p>
-          <p><strong>10</strong> Dolor</p>
-          <p><strong>5</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$29</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>       
-    <div class="col-sm-4 col-xs-12">
-      <div class="panel panel-default text-center">
-        <div class="panel-heading">
-          <h1>Premium</h1>
-        </div>
-        <div class="panel-body">
-          <p><strong>100</strong> Lorem</p>
-          <p><strong>50</strong> Ipsum</p>
-          <p><strong>25</strong> Dolor</p>
-          <p><strong>10</strong> Sit</p>
-          <p><strong>Endless</strong> Amet</p>
-        </div>
-        <div class="panel-footer">
-          <h3>$49</h3>
-          <h4>per month</h4>
-          <button class="btn btn-lg">Sign Up</button>
-        </div>
-      </div>      
-    </div>    
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">CONTACT</h2>
-  <div class="row">
-    <div class="col-sm-5">
-      <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Chicago, US</p>
-      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> myemail@something.com</p>	   
+    <div class="col-sm-3">
+      <img src="img/Mancity.jpg" >
+      <h4>Manchester City</h4>
+      <p>Silva, Aguero...</p>
     </div>
-    <div class="col-sm-7 slideanim">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-        </div>
-      </div>
-      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Send</button>
-        </div>
-      </div>	
+    <div class="col-sm-3">
+      <img src="img/DM.png" >
+      <h4>Dallas Mavricks</h4>
+      <p>Dirk Nowitzki</p>
+    </div>
+    <div class="col-sm-3">
+      <img src="img/Coldplay.jpg" >
+      <h4>Coldplay</h4>
+      <p>A head full of dreams</p>
+    </div>
+<div class="col-sm-3">
+      <img src="img/Adele.jpg" >
+      <h4>Adele</h4>
+      <p>21, 25...</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <img src="img/tiffany.png" >
+      <h4>Tiffany</h4>
+      <p>Shining Smile</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="img/Raul.jpg" >
+      <h4>Raul</h4>
+      <p>Forever Captain</p>
+    </div>
+    <div class="col-sm-4">
+      <img src="img/Konami.jpg" >
+      <h4 style="color:#303030;">Konami</h4>
+      <p>PES Series...</p>
     </div>
   </div>
 </div>
 
+
+
+
+<div class="text-center">
+	<h2>Places I have studied, worked and traveled</h2>
+  </div>
 <div id="googleMap" style="height:400px;width:100%;"></div>
 
 <!-- Add Google Maps -->
-<script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+<script type="text/javascript">
+  function initialize() {
+    var locations = [
+      ['Ma\'anshan', 31.670452, 118.506760],
+	  ['Wuhu', 31.352859, 118.432941],
+      ['Nanjing', 32.060255, 118.796877],
+	  ['Chaohu', 31.624522, 117.890355],
+	  ['Huangshan', 29.714748, 118.337621],
+	  ['Wuxi', 31.491170, 120.311910],
+	  ['Hefei', 31.820592, 117.227219],
+	  ['Anqing', 30.531920, 117.115101],
+	  ['Shanghai', 31.230416, 121.473701],
+	  ['Hangzhou', 30.274085, 120.155070],
+	  ['Suzhou', 31.298979, 120.585290],
+	  ['Yangzhou', 32.394213, 119.412947],
+	  ['Changzhou', 31.811226, 119.974062],
+	  ['Ningbo', 29.868336, 121.543990],
+	  ['Zhoushan', 29.985295, 122.207216],
+	  ['Guangzhou', 23.129110, 113.264385],
+	  ['Shenzhen', 22.543096, 114.057865],
+	  ['San Francisco', 37.774929, -122.419416,],
+	  ['Hayward', 37.668821, -122.080796],
+	  ['Sacramento', 38.581572, -121.494400],
+      ['Monterey', 36.600238, -121.894676],
+	  ['Hollister', 36.852455, -121.401602],
+	  ['Bakersfield', 35.373292, -119.018712],
+	  ['Solvang', 34.595820, -120.137648],
+      ['Los Angelis', 34.052234, -118.243685],
+	  ['Las Vegas', 36.114707, -115.172850],
+	  ['Grand Canyon', 36.054445, -112.140111],
+	  ['Yosimite', 37.742727, -119.598697]
+    ];
 
-function initialize() {
-var mapProp = {
-  center:myCenter,
-  zoom:12,
-  scrollwheel:false,
-  draggable:false,
-  mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
+    var map = new google.maps.Map(document.getElementById('googleMap'), {
+      zoom: 3,
+      center: new google.maps.LatLng(42.7940146,-176.3679115),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var infowindow = new google.maps.InfoWindow();
 
-var marker = new google.maps.Marker({
-  position:myCenter,
-  });
+    var marker, i;
 
-marker.setMap(map);
+    for (i = 0; i < locations.length; i++) {  
+		marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+     });
+
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&' +
+      'callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+  </script>
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Bootstrap Theme Made By <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a></p>		
+  <p>Copyright: Nan Wu</a></p>		
 </footer>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/plugins/wow/wow.min.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -526,6 +707,22 @@ $(document).ready(function(){
   });
 })
 </script>
+
+</body>
+</html>
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/plugins/wow/wow.min.js"></script>
+<script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+
 
 </body>
 </html>
