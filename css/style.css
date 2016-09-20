@@ -6775,13 +6775,13 @@ body.landing-page {
 .landing-page .carousel-caption {
   position: absolute;
   top: 100px;
-  left: 0;
+  left: 45%;
   bottom: auto;
   right: auto;
   text-align: left;
 }
 .landing-page .carousel-caption.blank {
-  top: 140px;
+  top: 40px;
 }
 .landing-page .carousel-image {
   position: absolute;
