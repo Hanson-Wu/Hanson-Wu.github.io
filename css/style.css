@@ -6775,10 +6775,10 @@ body.landing-page {
 .landing-page .carousel-caption {
   position: absolute;
   top: 100px;
-  left: 43%;
+  left: 30%;
   bottom: auto;
   right: auto;
-  text-align: left;
+  text-align: center;
 }
 .landing-page .carousel-caption.blank {
   top: 40px;
